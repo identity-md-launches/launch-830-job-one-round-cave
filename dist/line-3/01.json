@@ -1,0 +1,22 @@
+{
+  "name": "The First Inspection",
+  "image": "https://api.imd.fun/artifacts/349bfd521926f2205846f45d24cef9454fc99b58dbdd08ecdeda3ab25aec8e5c",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Base"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 3"
+    },
+    {
+      "trait_type": "Number",
+      "value": 1
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Handoff Check"
+    }
+  ]
+}
