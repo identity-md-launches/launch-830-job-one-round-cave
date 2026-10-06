@@ -1,0 +1,42 @@
+{
+  "block": 26135076,
+  "poolManager": "0x000000000004444c5dc75cB358380D2e3dE08A90",
+  "poolId": "0x888b07bd282f587d3c6b0fcb23e7fc55bbb33abe8910dd7492db815dc8dc5592",
+  "poolIdVerified": true,
+  "currency0": {
+    "address": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "symbol": "IMD",
+    "decimals": 18,
+    "totalSupply": 4099099035462000000000000
+  },
+  "currency1": {
+    "address": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+    "symbol": "ZTO",
+    "decimals": 18,
+    "totalSupply": 1000000000000000000000000000
+  },
+  "fee": 12500,
+  "dynamicFee": false,
+  "tickSpacing": 60,
+  "hooks": "0x784ff9a3ac5d88a30bfff6f7f2a270161fbe6000",
+  "hookPermissions": [
+    "beforeInitialize"
+  ],
+  "initialized": true,
+  "slot0": {
+    "sqrtPriceX96": 16296374681608279021993448201572,
+    "tick": 106532,
+    "protocolFee": 0,
+    "lpFee": 12500
+  },
+  "protocolFeeSplit": {
+    "zeroForOne": 0,
+    "oneForZero": 0
+  },
+  "liquidity": 1395488085257384418720526,
+  "price": {
+    "ZTO_per_IMD": "42308.0330634",
+    "IMD_per_ZTO": "2.36361732653e-05",
+    "fromTick_ZTO_per_IMD": "42305.2882736"
+  }
+}

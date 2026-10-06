@@ -1,0 +1,6 @@
+- Read the four GOAL.md files, all four tool sources and READMEs, line 3 regression tests, line 4 NEEDS.md, and existing dist records.
+- Reused line 3's PNG/receipt implementation in shared/receipt_core.py, changing only its workspace root and adding attribution.
+- Used line 1/2's common version-1 manifest schema and all three original verifiers for interoperability checks.
+- Used line 4's read-only v4pool with its ZTO/IMD defaults and a pinned public Ethereum block for concrete evidence.
+- Used the supplied bare cave image as the gathering wall base and the built-in image editing tool for the added mark.
+- Added no dependency, configuration change, coin request, or line-folder edit.

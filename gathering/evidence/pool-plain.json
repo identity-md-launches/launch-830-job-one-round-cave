@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "path": "gathering/evidence/zto-pool.json",
+      "bytes": 1110,
+      "sha256": "bac963266c7be0452f1fd2a6592459039b5c072ed6100f471503c43f32eb35fe"
+    },
+    {
+      "path": "artifacts/gathering/wall.png",
+      "bytes": 3094235,
+      "sha256": "127930b3021cffaabafdfa9ce5206a5f0fcf02e3065b6382ad5f519bf276c23b"
+    }
+  ]
+}

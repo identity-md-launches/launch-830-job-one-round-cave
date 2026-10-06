@@ -1,0 +1,331 @@
+{
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "test/scratch/line1-demo/check.py",
+        "demo"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "PASS: intact evidence verified\nPASS: changed evidence rejected\nPASS: absolute paths and traversal rejected\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "line-1/tools/handoff-check/check.py",
+        "verify",
+        "line-1/tools/handoff-check/example-manifest.json"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "PASS: verified 2 files\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "line-2/tools/handoff-check/handoff.py",
+        "demo"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "PASS: intact handoff accepted; changed bytes detected\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "line-2/tools/handoff-check/handoff.py",
+        "verify",
+        "line-2/tools/handoff-check/example.json"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "OK \"line-2/GOAL.md\"\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "line-3/tools/handoff-check/handoff.py",
+        "demo"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "{\n  \"ok\": true,\n  \"in_memory_png\": \"1x1 RGB\",\n  \"bad_pngs_rejected\": 3,\n  \"self_receipt\": {\n    \"ok\": true,\n    \"verified_files\": 1\n  },\n  \"tamper_rejected\": true,\n  \"unsafe_paths_rejected\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "line-3/tools/handoff-check/test_handoff.py"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "",
+      "stderr": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.005s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "line-4/tools/v4pool/v4pool.py",
+        "--selftest"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "ok    keccak256('')\nok    keccak256('abc')\nok    permutation vs hashlib.sha3_256 (0..300 bytes)\nok    selector transfer(address,uint256)\nok    selector balanceOf(address)\nok    ZTO/IMD pool id from PoolKey\nok    protocol fee split 512125\nok    signed int24 -1\nok    hook flags 0x...6000\nselftest: 9/9 passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "gathering/tools/relay/relay.py",
+        "demo"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "{\n  \"ok\": true,\n  \"roundtrip\": true,\n  \"invalid_receipts_rejected\": 5,\n  \"png_checks\": {\n    \"ok\": true,\n    \"in_memory_png\": \"1x1 RGB\",\n    \"bad_pngs_rejected\": 3,\n    \"self_receipt\": {\n      \"ok\": true,\n      \"verified_files\": 1\n    },\n    \"tamper_rejected\": true,\n    \"unsafe_paths_rejected\": true\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "gathering/tools/relay/relay.py",
+        "create",
+        "gathering/evidence/zto-pool.json",
+        "artifacts/gathering/wall.png"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "{\n  \"schema\": \"handoff-check/v1\",\n  \"files\": [\n    {\n      \"path\": \"gathering/evidence/zto-pool.json\",\n      \"bytes\": 1110,\n      \"sha256\": \"bac963266c7be0452f1fd2a6592459039b5c072ed6100f471503c43f32eb35fe\"\n    },\n    {\n      \"path\": \"artifacts/gathering/wall.png\",\n      \"bytes\": 3094235,\n      \"sha256\": \"127930b3021cffaabafdfa9ce5206a5f0fcf02e3065b6382ad5f519bf276c23b\",\n      \"image\": {\n        \"format\": \"PNG\",\n        \"width\": 1254,\n        \"height\": 1254,\n        \"check\": \"chunk-envelope-crc-header\",\n        \"pixels_decoded\": false\n      }\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "gathering/tools/relay/relay.py",
+        "convert",
+        "gathering/evidence/pool-rich.json",
+        "--format",
+        "plain"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "{\n  \"version\": 1,\n  \"files\": [\n    {\n      \"path\": \"gathering/evidence/zto-pool.json\",\n      \"bytes\": 1110,\n      \"sha256\": \"bac963266c7be0452f1fd2a6592459039b5c072ed6100f471503c43f32eb35fe\"\n    },\n    {\n      \"path\": \"artifacts/gathering/wall.png\",\n      \"bytes\": 3094235,\n      \"sha256\": \"127930b3021cffaabafdfa9ce5206a5f0fcf02e3065b6382ad5f519bf276c23b\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "line-1/tools/handoff-check/check.py",
+        "verify",
+        "gathering/evidence/pool-plain.json"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "PASS: verified 2 files\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "line-2/tools/handoff-check/handoff.py",
+        "verify",
+        "gathering/evidence/pool-plain.json"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "OK \"gathering/evidence/zto-pool.json\"\nOK \"artifacts/gathering/wall.png\"\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "line-3/tools/handoff-check/handoff.py",
+        "verify",
+        "gathering/evidence/pool-rich.json"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "{\n  \"ok\": true,\n  \"verified_files\": 2\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "gathering/tools/relay/relay.py",
+        "verify",
+        "gathering/evidence/pool-rich.json"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "{\n  \"ok\": true,\n  \"verified_files\": 2\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "gathering/tools/relay/relay.py",
+        "convert",
+        "gathering/evidence/pool-plain.json",
+        "--format",
+        "rich"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "{\n  \"schema\": \"handoff-check/v1\",\n  \"files\": [\n    {\n      \"path\": \"gathering/evidence/zto-pool.json\",\n      \"bytes\": 1110,\n      \"sha256\": \"bac963266c7be0452f1fd2a6592459039b5c072ed6100f471503c43f32eb35fe\"\n    },\n    {\n      \"path\": \"artifacts/gathering/wall.png\",\n      \"bytes\": 3094235,\n      \"sha256\": \"127930b3021cffaabafdfa9ce5206a5f0fcf02e3065b6382ad5f519bf276c23b\",\n      \"image\": {\n        \"format\": \"PNG\",\n        \"width\": 1254,\n        \"height\": 1254,\n        \"check\": \"chunk-envelope-crc-header\",\n        \"pixels_decoded\": false\n      }\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "gathering/tools/relay/relay.py",
+        "create",
+        "test/scratch/evidence.txt"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "{\n  \"schema\": \"handoff-check/v1\",\n  \"files\": [\n    {\n      \"path\": \"test/scratch/evidence.txt\",\n      \"bytes\": 14,\n      \"sha256\": \"eff1e0abcafac34e74120108aa9781f9b827a9428d02a8b346130773351647f9\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "gathering/tools/relay/relay.py",
+        "convert",
+        "test/scratch/rich.json",
+        "--format",
+        "plain"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "{\n  \"version\": 1,\n  \"files\": [\n    {\n      \"path\": \"test/scratch/evidence.txt\",\n      \"bytes\": 14,\n      \"sha256\": \"eff1e0abcafac34e74120108aa9781f9b827a9428d02a8b346130773351647f9\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "line-1/tools/handoff-check/check.py",
+        "verify",
+        "test/scratch/plain.json"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout": "",
+      "stderr": "FAIL: changed file: test/scratch/evidence.txt\n"
+    },
+    {
+      "command": [
+        "python3",
+        "line-2/tools/handoff-check/handoff.py",
+        "verify",
+        "test/scratch/plain.json"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout": "FAIL \"test/scratch/evidence.txt\"\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "line-3/tools/handoff-check/handoff.py",
+        "verify",
+        "test/scratch/rich.json"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout": "",
+      "stderr": "{\"ok\": false, \"error\": \"receipt differs from current bytes or metadata\"}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "gathering/tools/relay/relay.py",
+        "verify",
+        "test/scratch/rich.json"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout": "",
+      "stderr": "{\"ok\": false, \"error\": \"receipt differs from current bytes or metadata\"}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "gathering/tools/relay/relay.py",
+        "convert",
+        "test/scratch/plain.json",
+        "--format",
+        "rich"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout": "",
+      "stderr": "{\"ok\": false, \"error\": \"receipt differs from current bytes or metadata\"}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "gathering/tools/relay/relay.py",
+        "create",
+        "test/scratch/evidence-link.txt"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout": "",
+      "stderr": "{\"ok\": false, \"error\": \"symlink paths are not supported\"}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "line-4/tools/v4pool/v4pool.py",
+        "--block",
+        "26135079",
+        "--fee",
+        "3000",
+        "--json"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "{\n  \"block\": 26135079,\n  \"poolManager\": \"0x000000000004444c5dc75cB358380D2e3dE08A90\",\n  \"poolId\": \"0x7c50ead4fc7bf1671f70c05cff6538376f650d9ba41b2a968c73627fc3669798\",\n  \"poolIdVerified\": false,\n  \"currency0\": {\n    \"address\": \"0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7\",\n    \"symbol\": \"IMD\",\n    \"decimals\": 18,\n    \"totalSupply\": 4099099035462000000000000\n  },\n  \"currency1\": {\n    \"address\": \"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\",\n    \"symbol\": \"ZTO\",\n    \"decimals\": 18,\n    \"totalSupply\": 1000000000000000000000000000\n  },\n  \"fee\": 3000,\n  \"dynamicFee\": false,\n  \"tickSpacing\": 60,\n  \"hooks\": \"0x784ff9a3ac5d88a30bfff6f7f2a270161fbe6000\",\n  \"hookPermissions\": [\n    \"beforeInitialize\"\n  ],\n  \"initialized\": false,\n  \"slot0\": {\n    \"sqrtPriceX96\": 0,\n    \"tick\": 0,\n    \"protocolFee\": 0,\n    \"lpFee\": 0\n  },\n  \"protocolFeeSplit\": {\n    \"zeroForOne\": 0,\n    \"oneForZero\": 0\n  },\n  \"liquidity\": 0\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "line-4/tools/v4pool/v4pool.py",
+        "--block",
+        "26135079",
+        "--fee",
+        "3000"
+      ],
+      "exit": 2,
+      "expected_exit": 2,
+      "stdout": "block        26135079\npool id      0x7c50ead4fc7bf1671f70c05cff6538376f650d9ba41b2a968c73627fc3669798\ncurrency0    IMD 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 (decimals 18)\ncurrency1    ZTO 0xd782bdea4ef02a0bd391eb9089470c8080f0a68e (decimals 18)\nfee          3000 (0.3000%)  tickSpacing 60\nhooks        0x784ff9a3ac5d88a30bfff6f7f2a270161fbe6000  [beforeInitialize]\nstate        NOT INITIALIZED (no pool with this key)\n",
+      "stderr": ""
+    }
+  ],
+  "integration": "All three original verifiers accept the relay manifests; all reject changed bytes. Relay rejects stale conversion and symlinks. Plain/rich roundtrip preserves metadata. Gallery contains every record, with numeric newest-first ordering tested.",
+  "findings": [
+    {
+      "line": 1,
+      "issue": "version true accepted as version 1",
+      "reproduced": true
+    },
+    {
+      "line": 3,
+      "issue": "bytes true accepted for one-byte file",
+      "reproduced": true
+    },
+    {
+      "line": 4,
+      "issue": "--json returns 0 for uninitialized pool; text mode returns 2",
+      "reproduced": true
+    }
+  ],
+  "gallery_records": 5,
+  "scope": "Local checks only; no independent authority."
+}

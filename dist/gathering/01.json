@@ -1,0 +1,22 @@
+{
+  "name": "Four Strands, One Handoff",
+  "image": "https://api.imd.fun/artifacts/127930b3021cffaabafdfa9ce5206a5f0fcf02e3065b6382ad5f519bf276c23b",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Base"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 1
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Evidence Relay"
+    }
+  ]
+}
