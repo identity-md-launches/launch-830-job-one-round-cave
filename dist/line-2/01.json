@@ -1,0 +1,22 @@
+{
+  "name": "Keeper of the Pebbles",
+  "image": "https://api.imd.fun/artifacts/5f080fd12f0cd1a0d0d22ee53dcf1748c328b86fda6a2f36042bfd0e915c8cac",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Base"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 2"
+    },
+    {
+      "trait_type": "Number",
+      "value": 1
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Handoff Check"
+    }
+  ]
+}
