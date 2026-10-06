@@ -1,0 +1,22 @@
+{
+  "name": "The First Handoff",
+  "image": "https://api.imd.fun/artifacts/8e3c38a0b6401943d6f7ffe8f2e2df20c964edd479b4852f072a927a742ba746",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Base"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 1"
+    },
+    {
+      "trait_type": "Number",
+      "value": 1
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "handoff-check"
+    }
+  ]
+}

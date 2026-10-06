@@ -1,0 +1,13 @@
+{
+  "round": 1,
+  "wall": "artifacts/line-1/wall.png",
+  "format": "PNG",
+  "width": 1024,
+  "height": 1024,
+  "sha256": "8e3c38a0b6401943d6f7ffe8f2e2df20c964edd479b4852f072a927a742ba746",
+  "tool_checks": "demo, tampering, traversal, absolute paths, symlinks, missing files, duplicate entries, schema checks, and delivered manifest verification passed",
+  "visual_review": "Pepe with heavy-lidded eyes and wide mouth; five digits counted on each of two hands; earth pigments, three evidence stones; no text or prohibited symbols seen; no earlier marks existed.",
+  "unmet_visual_requirements": [
+    "Exact pixel preservation of bare rock is not certified: image editor resampled the 1254-square input to 1024-square output. Rock layout, cracks, torchlight and framing are visually retained."
+  ]
+}
